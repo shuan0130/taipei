@@ -1,8 +1,8 @@
 def state_code_compute(x):
 	from math import cos
 	scale_km = 0.5
-	lat = x['lat']
-	lon = x['long']
+	lat = x[2]
+	lon = x[3]
 	lat_to_km = lat*110.574
 	lon_to_km = abs(lon*(111.320*cos(lat)))
 	state_code_x = str(int(lat_to_km//scale_km))
